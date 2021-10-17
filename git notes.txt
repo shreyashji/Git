@@ -1,0 +1,58 @@
+git init : initilize git repository
+git status
+git add index.html
+git commit -m "your commit message" : commit cmd, -m means msg you want to pass
+touch about.html : touch cmd create new file
+git log
+git log --oneline : give msg in one line
+rm -rf .git  :Delete git repo never use
+git commit -a -m "commit message" : skip staging area
+git diff : difference, want to know exactaly what you changed, not just which files were changed(only when its in  staged)
+git diff --staged : to see what you have staged that will go into your next commit
+git ignore   : make  .gitignore file or foolder place name of the file you want to ignore
+git rm filename.txt : remove file in a folder
+git mv index.html home.html ; ove or rename file
+gir restore --staged filename.txt  :
+git checkout --filename  : restore to last version :: this can be dangerous cmnds, as it discards all your current changes in the working directory
+alias : second name : short name for big term
+git config --global alias.st status
+branching is most important
+git branch branch name: create new branch
+git checkout devlop to switch to master to own branch
+git branch -v : check in which branch you are
+git checkout branchname  :  checkout an existing branch or work on that branch
+git chheckou -b branchname : creating and checkout to new branch
+git log --oneline --graph --all : see changes in branch all
+git branch -D devlop : delet branch
+git merge impfix : to merge to master first checkout to working branch then merge
+esc + :wq      ==> devlop to master branch merge wq=write quit
+******MERGE CONFLICTS*****
+*****REBASING*****
+gitrebase master:   with rebase cmnd, you can take all the changes that were commited on one branch and replay them on a diffrent branch
+pointer goes to the common ancestor of the two branch(that one you are on and the one youre rebasing into),gets the diff introduced by each commit of the branch you're on
+savings thos diffs to temporary files. Resetting the current branch to the same commit as the branch you are rebasing onto, finally applying each change in turn.
+key points: no difference in the end product of the integration.but rebasing makes for a cleaner history.
+the log history looks like a linear history: it appears all the work happened in series,even when it originally happened in parallel
+often you will do this to make sure commits apply cleanly on a remote branch
+*******MERGE VS REBASE*********
+REBASE ONLY IN LOCAL REPO 
+
+
+git add .
+git commit -m "your msg"
+git push origin main  : push to origin in git site repo
+
+git clone url of repo  : change directory before thiss
+
+git add index.html
+git commit -m "your commit message" : commit cmd, -m means msg you want to pass
+git branch 3octsun
+git checkout master
+git add remote add origin https://github.com/shreyashji/Dsa-essential.git
+git push origin main 
+If the problem is "main and master are entirely different commit histories.", the following will works
+git checkout master   s
+git branch main master -f    
+git checkout main  
+git push origin main -f 
+
